@@ -26,7 +26,6 @@ app.get("/", (req, res) => {
 });
 router.get("/", (req, res) => {
   res.json(cars);
-  console.log("Hello ");
 });
 router.get("/:id", (req, res) => {
   const id = Number(req.params.id);
