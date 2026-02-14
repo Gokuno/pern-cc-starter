@@ -50,8 +50,10 @@ const App = () => {
 
       setCars((prev) => [...prev, createdCar]);
       setNewCar({ make: "", model: "", year: "", price: "" });
+      alert("New Car was added!");
     } catch (err) {
       console.log(err);
+      alert("Car could not be added!");
     }
   };
 
@@ -63,8 +65,10 @@ const App = () => {
       });
 
       setCars((prev) => prev.filter((car) => car.id !== id));
+      alert("Car was deleted!");
     } catch (err) {
       console.log(err);
+      alert("Car could was not deleted");
     }
   };
 
@@ -82,8 +86,10 @@ const App = () => {
       const data = await res.json();
 
       setCars((prev) => prev.map((car) => (car.id === id ? data : car)));
+      alert("Car was updated");
     } catch (err) {
       console.log(err);
+      alert("Car could not be updated");
     }
   };
 
