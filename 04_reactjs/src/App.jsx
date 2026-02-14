@@ -116,7 +116,6 @@ const App = () => {
           />
           <input
             name="year"
-            type="number"
             placeholder="Year"
             value={newCar.year}
             onChange={handleChange}
@@ -124,7 +123,6 @@ const App = () => {
           />
           <input
             name="price"
-            type="number"
             placeholder="Price"
             value={newCar.price}
             onChange={handleChange}
